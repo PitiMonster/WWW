@@ -1,0 +1,150 @@
+.naw__checkbox {
+  display: none;
+}
+
+.naw__btn {
+  background-color: var(--black);
+  height: 7rem;
+  width: 7rem;
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  border-radius: 50%;
+  z-index: 2000;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+
+.naw__background {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 3.5rem;
+  right: 3.5rem;
+  background-image: radial-gradient(var(--gray), black);
+  z-index: 1000;
+  transition: all 0.4s ease-out;
+}
+
+.naw {
+  height: 100vh;
+  z-index: 1500;
+  position: fixed;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  width: 0;
+  transition: all 0.8s;
+}
+
+.naw__lista {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+
+.naw__item {
+  margin: 1rem;
+}
+
+.naw__link:link,
+.naw__link:visited {
+  display: inline-block;
+  font-size: 3rem;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    120deg,
+    transparent,
+    transparent 0%,
+    transparent 50%,
+    white 50%
+  );
+  background-size: 230%;
+  transition: all 0.4s ease-out;
+}
+
+.naw__link:hover,
+.naw__link:active {
+  background-position: 100%;
+  color: var(--black);
+  transform: translateX(10px);
+}
+
+.naw__checkbox:checked ~ .naw {
+  opacity: 1;
+  width: 100%;
+}
+
+.naw__checkbox:checked ~ .naw__background {
+  transform: scale(80);
+}
+
+.naw__checkbox:checked ~ .naw__btn {
+  background-color: transparent;
+}
+
+.naw__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.naw__icon,
+.naw__icon::after,
+.naw__icon::before {
+  width: 4rem;
+  height: 2px;
+  background-color: white;
+  display: inline-block;
+}
+
+.naw__icon::after,
+.naw__icon::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: all 0.2s;
+}
+
+.naw__icon::before {
+  top: -1rem;
+}
+
+.naw__icon::after {
+  top: 1rem;
+}
+
+.naw__btn:hover .naw__icon::before {
+  top: -1.2rem;
+}
+
+.naw__btn:hover .naw__icon::after {
+  top: 1.2rem;
+}
+
+.naw__checkbox:checked + .naw__btn .naw__icon {
+  background-color: transparent;
+}
+.naw__checkbox:checked + .naw__btn .naw__icon::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+.naw__checkbox:checked + .naw__btn .naw__icon::after {
+  top: 0;
+  transform: rotate(-135deg);
+}
+
+@media (max-width: 600px) {
+  .naw__link:link,
+  .naw__link:visited {
+    font-size: 2rem;
+  }
+}

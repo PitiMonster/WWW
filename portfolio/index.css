@@ -1,0 +1,296 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 0.625rem;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #1f1f1f;
+  --yellow: #ffd600;
+  --gray: #3d3d3d;
+}
+
+body {
+  background-color: var(--black);
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+#o-mnie {
+  min-height: 100vh;
+  height: auto;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.prostokat {
+  width: 80%;
+  height: 70vh;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-bottom: 2px solid white;
+  display: flex;
+  justify-content: space-around;
+}
+
+.lewa_strona {
+  display: inline-block;
+  position: relative;
+  height: 100%;
+  padding: 2rem 0;
+  overflow: hidden;
+  width: 60%;
+}
+
+.imie {
+  font-size: 8rem;
+  font-weight: 400;
+  color: white;
+}
+
+.zawod {
+  font-size: 4rem;
+  font-weight: 300;
+  color: rgb(197, 197, 197);
+  padding-left: 2rem;
+}
+
+.firma {
+  color: var(--yellow);
+  font-size: 4rem;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.firma__small {
+  font-size: 2rem;
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.opis {
+  /* visibility: hidden; */
+  /* opacity: 0; */
+  font-family: "PT Sans", sans-serif;
+  color: white;
+  padding: 4rem 0 0 2rem;
+  position: relative;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  /* transition: all .5s ease-out; */
+  font-size: 2rem;
+  overflow: hidden;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.kontakt {
+  position: relative;
+  padding: 3rem 0 3rem 2rem;
+  display: flex;
+  bottom: -5rem;
+  justify-content: space-evenly;
+}
+
+.kontakt a {
+  display: inline-block;
+  font-size: 2.8rem;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+}
+
+.kontakt a:hover {
+  transition: all 0.3 ease-out;
+  transform: scale(1.1);
+  color: var(--yellow);
+}
+
+/* .wiecej__btn {
+    position: absolute;
+    cursor: pointer;
+    outline: none;
+    transition: all .4s ease-out;
+    bottom: 30%;
+    left: 40%;
+    transform: translate(-50%);
+    border: 2px solid white;
+    background-color: var(--black);
+    color: white;
+    font-size: 4rem;
+    font-weight: 300;
+    padding: 1rem 5rem;
+} */
+
+/* .wiecej__btn:hover {
+    transform: translate(-50%, -20%);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, .5);
+}
+
+.wiecej__btn:hover ~ .opis {
+    visibility: visible;
+    opacity: 1;
+} */
+
+.prawa_strona {
+  position: relative;
+  overflow: hidden;
+  width: auto;
+  height: 110%;
+  object-fit: contain;
+  display: inline-block;
+}
+
+/* @media(max-width: 1700px) {
+  .kontakt {
+    bottom: 0;
+  }
+} */
+
+@media (max-width: 1541px) {
+  .lewa_strona {
+    width: 60%;
+  }
+
+  .imie {
+    font-size: 7rem;
+  }
+
+  .firma,
+  .zawod {
+    font-size: 4.5rem;
+  }
+
+  .kontakt {
+    padding-top: 2rem;
+  }
+
+  /* .prawa_strona {
+    height: 100%;
+  } */
+}
+
+@media (max-width: 1430px) {
+  .prostokat {
+    width: 90%;
+  }
+
+  .kontakt {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 1240px) {
+  .prostokat {
+    height: 60vh;
+  }
+
+  .imie {
+    font-size: 5.5rem;
+  }
+
+  .firma,
+  .zawod {
+    font-size: 3.5rem;
+  }
+
+  .opis {
+    font-size: 1.8rem;
+  }
+
+  .kontakt a {
+    font-size: 2.3rem;
+  }
+
+  .prawa_strona {
+    height: 90%;
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 1115px) {
+  .kontakt {
+    bottom: -2rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .prostokat {
+    flex-direction: column-reverse;
+    /* justify-items: center; */
+    width: 100vw;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    margin-top: 6rem;
+    overflow: hidden;
+    border: none;
+    top: 0;
+    left: 0;
+    transform: translate(0);
+  }
+
+  .prawa_strona {
+    align-self: center;
+    /* height: 100%; */
+    height: auto;
+    max-height: 432px;
+    overflow: hidden;
+  }
+
+  .lewa_strona {
+    text-align: center;
+    width: 80vw;
+  }
+
+  .zawod {
+    padding-left: 0;
+  }
+
+  .opis {
+    width: 100%;
+    text-align: justify;
+    padding-left: 0;
+    padding-top: 1rem;
+  }
+
+  .kontakt {
+    padding-left: 0;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    row-gap: 2rem;
+  }
+}
+
+@media (max-width: 530px) {
+  .imie {
+    font-size: 4rem;
+  }
+
+  .zawod {
+    font-size: 2.8rem;
+  }
+
+  .firma {
+    font-size: 2.8rem;
+  }
+
+  .opis,
+  .firma__small {
+    font-size: 1.5rem;
+  }
+
+  .prawa_strona {
+    max-height: 380px;
+  }
+
+  .kontakt a {
+    font-size: 2rem;
+  }
+}
