@@ -6,9 +6,9 @@
   background-color: var(--black);
   height: 7rem;
   width: 7rem;
-  position: absolute;
-  top: 3rem;
-  right: 3rem;
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
   border-radius: 50%;
   z-index: 2000;
   cursor: pointer;
@@ -20,8 +20,8 @@
   width: 6rem;
   border-radius: 50%;
   position: fixed;
-  top: 3.5rem;
-  right: 3.5rem;
+  top: 1.5rem;
+  right: 2.5rem;
   background-image: radial-gradient(var(--gray), black);
   z-index: 1000;
   transition: all 0.4s ease-out;
