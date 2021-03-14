@@ -73,15 +73,12 @@ body {
 }
 
 .opis {
-  /* visibility: hidden; */
-  /* opacity: 0; */
   font-family: "PT Sans", sans-serif;
   color: white;
   padding: 4rem 0 0 2rem;
   position: relative;
   word-wrap: break-word;
   white-space: pre-wrap;
-  /* transition: all .5s ease-out; */
   font-size: 2rem;
   overflow: hidden;
   letter-spacing: 1px;
@@ -108,36 +105,9 @@ body {
 
 .kontakt a:hover {
   transition: all 0.3 ease-out;
-  transform: scale(1.1);
+  transform: scale(1.1) rotate(-1deg);
   color: var(--yellow);
 }
-
-/* .wiecej__btn {
-    position: absolute;
-    cursor: pointer;
-    outline: none;
-    transition: all .4s ease-out;
-    bottom: 30%;
-    left: 40%;
-    transform: translate(-50%);
-    border: 2px solid white;
-    background-color: var(--black);
-    color: white;
-    font-size: 4rem;
-    font-weight: 300;
-    padding: 1rem 5rem;
-} */
-
-/* .wiecej__btn:hover {
-    transform: translate(-50%, -20%);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, .5);
-}
-
-.wiecej__btn:hover ~ .opis {
-    visibility: visible;
-    opacity: 1;
-} */
-
 .prawa_strona {
   position: relative;
   overflow: hidden;
@@ -146,12 +116,6 @@ body {
   object-fit: contain;
   display: inline-block;
 }
-
-/* @media(max-width: 1700px) {
-  .kontakt {
-    bottom: 0;
-  }
-} */
 
 @media (max-width: 1541px) {
   .lewa_strona {
@@ -170,10 +134,6 @@ body {
   .kontakt {
     padding-top: 2rem;
   }
-
-  /* .prawa_strona {
-    height: 100%;
-  } */
 }
 
 @media (max-width: 1430px) {
@@ -223,7 +183,6 @@ body {
 @media (max-width: 960px) {
   .prostokat {
     flex-direction: column-reverse;
-    /* justify-items: center; */
     width: 100vw;
     justify-content: flex-start;
     align-items: center;
@@ -238,7 +197,6 @@ body {
 
   .prawa_strona {
     align-self: center;
-    /* height: 100%; */
     height: auto;
     max-height: 432px;
     overflow: hidden;

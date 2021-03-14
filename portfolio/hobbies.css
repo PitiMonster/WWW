@@ -20,7 +20,7 @@ body {
 
 #zainteresowania__lista {
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   text-align: center;
 }
 
@@ -49,7 +49,6 @@ body {
   background: #000000;
   transform: rotate(-45deg);
   margin: -145px;
-  /* overflow: hidden; */
   opacity: 0.5;
   transition: all 0.3s;
   text-align: center;
@@ -166,6 +165,11 @@ body {
     padding-top: 8rem;
   }
 
+  #zainteresowania__lista {
+    height: 80vh;
+    width: 100vw;
+  }
+
   .page_name {
     font-size: 5rem;
   }
@@ -185,8 +189,7 @@ body {
 
 @media (max-width: 740px) {
   #zainteresowania__lista {
-    height: auto;
-    width: 100vw;
+    height: 75vh;
   }
 
   .page_name {
@@ -241,14 +244,6 @@ body {
     font-size: 2.3rem;
   }
 
-  /* .lista li .bottom {
-    top: -25%;
-    left: -25%;
-  }
-  .lista li .top {
-    top: 130%;
-    left: 130%; */
-  /* } */
   .lista li:hover .bottom {
     top: 50%;
     left: 50%;
@@ -260,6 +255,11 @@ body {
 }
 
 @media (max-width: 590px) {
+
+  #zainteresowania__lista {
+    height: 60vh;
+  }
+
   .page_name {
     font-size: 3rem;
   }
@@ -277,39 +277,12 @@ body {
     margin: -59px;
   }
 
-  /* .lista li#krypto_li {
-        top: 0;
-        left: 37%;
-      }
-    
-      .lista li#silownia_li {
-        top: 25%;
-        left: 53%;
-      }
-    
-      .lista li#muzyka_li {
-        top: 50%;
-        left: 37%;
-      }
-    
-      .lista li#szachy_li {
-        top: 75%;
-        left: 53%;
-      }
-    
-      .lista li#skakanka_li {
-        top: 100%;
-        left: 37%;
-      } */
-
   .lista li .nazwa {
     font-size: 2rem;
   }
 }
 
 @media (max-width: 400px) {
-
-
   .lista {
     height: 400px;
     width: 190px;
@@ -325,5 +298,49 @@ body {
 
   .lista li .nazwa {
     font-size: 2rem;
+  }
+}
+
+#zaint__opisy {
+  height: auto;
+  margin: auto;
+  width: 80vw;
+  padding: 3rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 4rem 7rem;
+  place-items: center;
+  place-content: center;
+  /* border-top: 2px solid white; */
+  overflow: hidden;
+}
+
+.zaint__opis {
+  color: white;
+  margin: auto;
+  letter-spacing: 1px;
+  line-height: 1.4;
+}
+
+.opis__nazwa {
+  font-size: 4rem;
+  font-weight: 400;
+  border-bottom: 1px solid white;
+  width: auto;
+}
+
+.opis__tresc {
+  font-size: 1.7rem;
+  font-weight: lighter;
+  padding-top: 1rem;
+}
+
+@media (max-width: 920px) {
+  .opis__nazwa {
+    font-size: 3.5rem;
+  }
+
+  .opis__tresc {
+    font-size: 1.5rem;
   }
 }
