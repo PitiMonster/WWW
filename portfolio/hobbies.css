@@ -255,7 +255,6 @@ body {
 }
 
 @media (max-width: 590px) {
-
   #zainteresowania__lista {
     height: 60vh;
   }
@@ -342,5 +341,49 @@ body {
 
   .opis__tresc {
     font-size: 1.5rem;
+  }
+}
+@media (max-width: 450px) {
+  .opis__nazwa {
+    font-size: 3rem;
+  }
+
+  .opis__tresc {
+    font-size: 1.3rem;
+  }
+}
+
+#zaint_mat_inf {
+  width: 80vw;
+  margin: auto;
+  margin-top: 10rem;
+}
+
+#podsekcja__nazwa {
+  font-size: 5rem;
+  color: white;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 1160px) {
+  #podsekcja__nazwa {
+    font-size: 4.5rem;
+  }
+}
+@media (max-width: 920px) {
+  #zaint_mat_inf {
+    margin-top: 5rem;
+  }
+
+  #podsekcja__nazwa {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 450px) {
+  #podsekcja__nazwa {
+    font-size: 3.5rem;
   }
 }
