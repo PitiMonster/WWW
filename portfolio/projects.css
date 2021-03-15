@@ -33,73 +33,142 @@ body {
 
 .projekty__wiz {
   width: 100vw;
-  height: 60vh;
-  position: relative;
+  /* margin-top: 20rem; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  perspective: 1500px;
 }
 
 .projekt__wiz {
   /* width: 100%;
     height: 100%; */
-  overflow: hidden;
   position: relative;
-  height: 400px;
-  width: 600px;
+  height: 300px;
+  width: 450px;
   /* object-fit: scale-down; */
-  transition: all .6s ease-out;
-  transform: rotateY(40deg);
-  transform-style: preserve-3d;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 1);
-  margin: 0 -100px;
+  transition: all 0.6s ease-out;
+  border-radius: 5px;
 }
 
-.projekty__wiz:hover .projekt__wiz {
+/* .projekty__wiz:hover .projekt__wiz {
   transform: rotateY(40deg) scale(0.8);
 }
 .projekty__wiz:hover .projekt__wiz:hover {
   transform: rotateY(0) scale(1.2);
   z-index: 10;
+} */
+.projekt__wiz:hover .wiz__nazwa {
+  font-size: 4rem;
+  font-weight: 400;
 }
-.projekty__wiz:hover .projekt__wiz:hover .wiz__obrazek {
+.projekt__wiz:hover .wiz__obrazek {
   filter: blur(3px) brightness(50%);
+  transform: translateY(-50%);
 }
-.projekty__wiz:hover .projekt__wiz:hover .wiz__obrazek ~ .wiz__opis {
-    visibility: visible;
+.projekt__wiz:hover .wiz__obrazek ~ .wiz__opis {
+  opacity: 1;
+  bottom: -30%;
+
+}
+
+.wiz__nazwa {
+  font-size: 3rem;
+  font-weight: 300;
+  color: white;
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all .3s;
+  z-index: 50;
 }
 
 .wiz__obrazek {
   max-width: 100%;
   height: 100%;
+  position: relative;
   object-fit: cover;
   overflow: hidden;
   transition: all 1s;
+  border-radius: 5px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 1);
+  z-index: 30;
 }
 
 .wiz__opis {
   position: absolute;
-  top: 50%;
+  bottom: 30%;
   left: 50%;
+  width: 100%;
+  padding: 0 2rem;
   transform: translate(-50%, -50%);
   color: white;
-  visibility: hidden;
-  transition: all 1s;
+  opacity: 0;
+  transition: all .6s ease-out;
   font-size: 2.5rem;
-  font-weight: lighter;
+  font-weight: 300;
   letter-spacing: 1px;
+  line-height: 1.4;
   font-family: "PT Sans", sans-serif;
+  z-index: 0;
 }
 
-.wiz__reh-med {
-  /* background-image: url(./fotki/reh-med.png); */
+.wiz__opis a {
+  text-decoration: none;
+  font-size: inherit;
+  cursor: pointer;
 }
 
-.wiz__slusarczyk {
-  /* background-image: url(./fotki/slusarczyk.png); */
+
+.firma__mala {
+  color: var(--yellow);
 }
 
-.wiz__dzikbook {
-  /* background-image: url(./fotki/dzikbook.png); */
+.reh-med__link {
+  color: blue;
+  cursor: pointer;
+}
+
+.slusar__link {
+  color: rgb(253, 152, 0);
+}
+
+.dzikbook__link {
+  color: rgb(111, 182, 5);
+}
+
+@media (max-width: 1540px) {
+  .projekt__wiz {
+    margin-top: 20rem;
+    height: 300px;
+    width: 500px;
+    transform: rotateY(40deg);
+    margin: 0 -80px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .projekt__wiz {
+    width: 400px;
+    margin: 0;
+    perspective: 1000px;
+  }
+
+  .wiz__reh-med {
+    /* background-image: url(./fotki/reh-med.png); */
+  }
+
+  .wiz__slusarczyk {
+    /* background-image: url(./fotki/slusarczyk.png); */
+    transform: translateY(0) translateZ(-10rem);
+  }
+
+  .wiz__dzikbook {
+    /* background-image: url(./fotki/dzikbook.png); */
+    transform: rotateY(-40deg);
+  }
 }
