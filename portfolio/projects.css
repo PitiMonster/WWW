@@ -49,7 +49,7 @@ body {
   height: 400px;
   width: 600px;
   /* object-fit: scale-down; */
-  transition: all 0.5s ease-out;
+  transition: all .6s ease-out;
   transform: rotateY(40deg);
   transform-style: preserve-3d;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 1);
@@ -75,7 +75,7 @@ body {
   height: 100%;
   object-fit: cover;
   overflow: hidden;
-  transition: all 0.5s;
+  transition: all 1s;
 }
 
 .wiz__opis {
@@ -85,6 +85,7 @@ body {
   transform: translate(-50%, -50%);
   color: white;
   visibility: hidden;
+  transition: all 1s;
   font-size: 2.5rem;
   font-weight: lighter;
   letter-spacing: 1px;
