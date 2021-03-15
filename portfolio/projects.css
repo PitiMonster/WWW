@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 0.625rem;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #1f1f1f;
+  --yellow: #ffd600;
+  --gray: #3d3d3d;
+}
+
+body {
+  background-color: var(--black);
+  /* background-color: white; */
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  padding-top: 5rem;
+}
+
+#projekty__lista {
+  width: 100vw;
+  height: 90vh;
+  text-align: center;
+}
+
+.page_name {
+  font-size: 7rem;
+  color: white;
+  font-weight: 400;
+}
+
+.projekty__wiz {
+  width: 100vw;
+  height: 60vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1500px;
+}
+
+.projekt__wiz {
+  /* width: 100%;
+    height: 100%; */
+  overflow: hidden;
+  position: relative;
+  height: 400px;
+  width: 600px;
+  /* object-fit: scale-down; */
+  transition: all 0.5s ease-out;
+  transform: rotateY(40deg);
+  transform-style: preserve-3d;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 1);
+  margin: 0 -100px;
+}
+
+.projekty__wiz:hover .projekt__wiz {
+  transform: rotateY(40deg) scale(0.8);
+}
+.projekty__wiz:hover .projekt__wiz:hover {
+  transform: rotateY(0) scale(1.2);
+  z-index: 10;
+}
+.projekty__wiz:hover .projekt__wiz:hover .wiz__obrazek {
+  filter: blur(3px) brightness(50%);
+}
+.projekty__wiz:hover .projekt__wiz:hover .wiz__obrazek ~ .wiz__opis {
+    visibility: visible;
+}
+
+.wiz__obrazek {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.wiz__opis {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  visibility: hidden;
+  font-size: 2.5rem;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  font-family: "PT Sans", sans-serif;
+}
+
+.wiz__reh-med {
+  /* background-image: url(./fotki/reh-med.png); */
+}
+
+.wiz__slusarczyk {
+  /* background-image: url(./fotki/slusarczyk.png); */
+}
+
+.wiz__dzikbook {
+  /* background-image: url(./fotki/dzikbook.png); */
+}
