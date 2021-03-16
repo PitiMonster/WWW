@@ -33,14 +33,19 @@ body {
 
 .projekty__wiz {
   width: 100vw;
+  padding: 0 2rem;
   /* margin-top: 20rem; */
-  position: absolute;
-  top: 50%;
+  position: relative;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
+  align-content: center;
+  row-gap: 10rem;
+  column-gap: 2rem;
 }
 
 .projekt__wiz {
@@ -49,6 +54,9 @@ body {
   position: relative;
   height: 300px;
   width: 450px;
+  flex-wrap: wrap;
+  /* min-width: 350px; */
+  /* width: 25vw; */
   /* object-fit: scale-down; */
   transition: all 0.6s ease-out;
   border-radius: 5px;
@@ -69,21 +77,21 @@ body {
   filter: blur(3px) brightness(50%);
   transform: translateY(-50%);
 }
-.projekt__wiz:hover .wiz__obrazek ~ .wiz__opis {
+.projekt__wiz:hover > a ~ .wiz__opis {
   opacity: 1;
   bottom: -30%;
-
 }
 
 .wiz__nazwa {
   font-size: 3rem;
   font-weight: 300;
+  width: 100%;
   color: white;
   position: absolute;
   top: -10%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: all .3s;
+  transition: all 0.3s;
   z-index: 50;
 }
 
@@ -108,7 +116,7 @@ body {
   transform: translate(-50%, -50%);
   color: white;
   opacity: 0;
-  transition: all .6s ease-out;
+  transition: all 0.6s ease-out;
   font-size: 2.5rem;
   font-weight: 300;
   letter-spacing: 1px;
@@ -123,13 +131,12 @@ body {
   cursor: pointer;
 }
 
-
 .firma__mala {
   color: var(--yellow);
 }
 
 .reh-med__link {
-  color: blue;
+  color: rgb(0, 132, 255);
   cursor: pointer;
 }
 
@@ -141,34 +148,111 @@ body {
   color: rgb(111, 182, 5);
 }
 
-@media (max-width: 1540px) {
+@media (max-width: 1425px) {
+  .projekty__wiz {
+    top: 40%;
+  }
+
   .projekt__wiz {
-    margin-top: 20rem;
-    height: 300px;
-    width: 500px;
-    transform: rotateY(40deg);
-    margin: 0 -80px;
+    /* margin-top: 10rem; */
+    width: 400px;
+    height: 270px;
+  }
+
+  .wiz__opis {
+    font-size: 2rem;
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1279px) {
+  .projekty__wiz {
+    top: 50%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .page_name {
+    font-size: 5rem;
+  }
+
+  /* .projekty__wiz {
+    top: 50%;
+  } */
+
   .projekt__wiz {
+    width: 350px;
+    height: 230px;
+  }
+
+  .wiz__nazwa {
+    font-size: 2.5rem;
+  }
+
+  .projekt__wiz:hover .wiz__nazwa {
+    font-size: 3.2rem;
+    font-weight: 400;
+  }
+
+  .projekt__wiz:hover > a ~ .wiz__opis {
+    bottom: -50%;
+  }
+}
+
+@media (max-width: 759px) {
+  .projekty__wiz {
+    top: 0;
+    padding: 10rem 2rem;
+    transform: translate(0);
+    left: 0;
+    flex-direction: column;
+  }
+
+  .projekt__wiz {
+    height: auto;
     width: 400px;
-    margin: 0;
-    perspective: 1000px;
   }
 
-  .wiz__reh-med {
-    /* background-image: url(./fotki/reh-med.png); */
+  .wiz__obrazek {
+    height: auto;
   }
 
-  .wiz__slusarczyk {
-    /* background-image: url(./fotki/slusarczyk.png); */
-    transform: translateY(0) translateZ(-10rem);
+  .wiz__opis {
+    position: relative;
+    padding-top: 1rem;
+    opacity: 1;
+    z-index: 30;
+    bottom: 0;
+    transform: translateX(-50%);
   }
 
-  .wiz__dzikbook {
-    /* background-image: url(./fotki/dzikbook.png); */
-    transform: rotateY(-40deg);
+  .projekt__wiz:hover .wiz__nazwa {
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
+  .projekt__wiz:hover .wiz__obrazek {
+    filter: blur(0) brightness(100%);
+    transform: translateY(0);
+  }
+
+  .projekt__wiz:hover > a ~ .wiz__opis {
+    bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .page_name {
+    font-size: 4rem;
+  }
+
+  .projekty__wiz {
+    padding: 6rem 0.5rem;
+  }
+
+  .projekt__wiz {
+    width: 320px;
+  }
+
+  .wiz__opis {
+    font-size: 1.7rem;
   }
 }

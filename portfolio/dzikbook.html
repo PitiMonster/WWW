@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="project_item.css" />
+    <link rel="stylesheet" href="nawigacja.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Poppins:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Projekt Dzikbook</title>
+</head>
+<body>
+    <section id="nawiagacja">
+        <input type="checkbox" class="naw__checkbox" id="naw_check" />
+        <label for="naw_check" class="naw__btn"
+          ><span class="naw__icon">&nbsp;</span></label
+        >
+        <div class="naw__background">&nbsp;</div>
+        <nav class="naw">
+          <ul class="naw__lista">
+            <li class="naw__item">
+              <a href="index.html" class="naw__link">Strona główna</a>
+            </li>
+            <li class="naw__item">
+              <a href="hobbies.html" class="naw__link">Zainteresowania</a>
+            </li>
+            <li class="naw__item">
+              <a href="projects.html" class="naw__link">Projekty</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+    <section class="projekt__szczegol">
+        <h1 class="projekt__nazwa">Dzikbook</h1>
+        <div class="projekt__info">
+            <p class="projekt__opis">Aplikacja mobilna na zaliczenie kursu na studiach Programowanie Zespołowe. Przedstawia ona medium społecznościowe dla osób trenujących na siłowni. Mogą one również dodawać swoje treningi, diety oraz plany treningowe. Użyte technologie: Flutter (aplikacja mobilan), Django (server), Cassandra (rozproszona baza danych). Wykonany został on przez 6 osobowy zespół osób studiujący Informatyke na W11 na PWr.</p>
+            <img src="./fotki/dzikbook.png" alt="zdjęcie strony internetowej firmy Reh-med" class="projekt__zdjecie">
+        </div>
+        <div class="projekt__kod">
+            <h2 class="kod__tag">Spektakularny kod projektu</h2>
+            <pre class="kod__pre">
+                <code class="kod__tresc">
+Future<\void> _authentication(String password, String email, String urlSegment,
+    String firstName, String lastName) async {
+    final url = "$apiUrl/auth/$urlSegment/";
+    Map<\String, dynamic> body = {
+    'email': email,
+    'username': email,
+    'password': password,
+    'first_name': firstName,
+    'last_name': lastName,
+    };
+    FormData formData = new FormData.fromMap(body);
+    try {
+    final response = await dio.post(
+        url,
+        options: Options(
+        headers: {
+            "Accept": "application/json",
+        },
+        ),
+        data: formData,
+    );
+
+    if (response.statusCode >= 400) {
+        if (response.statusCode == 401) {
+        throw HttpException("Błędne dane!");
+        }
+        throw HttpException("Operacja nie powiodła się!");
+    }
+    if (urlSegment == 'login') {
+        final responseData = response.data;
+        _token = responseData['access'];
+        _refreshToken = responseData['refresh'];
+        _expiryDate = DateTime.now().add(
+        Duration(
+            seconds: 3600,
+        ),
+        );
+        _autoTokenRefresh();
+        notifyListeners();
+        final prefs = await SharedPreferences.getInstance();
+        final userData = json.encode(
+        {
+            'token': _token,
+            'refreshToken': _refreshToken,
+            'expiryDate': _expiryDate.toIso8601String(),
+        },
+        );
+        prefs.setString('userData', userData);
+    }
+    } catch (error) {
+    throw HttpException("Operacja nie powiodła się!");
+    }
+}
+
+                </code>
+            </pre>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 0.625rem;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #1f1f1f;
+  --yellow: #ffd600;
+  --gray: #3d3d3d;
+}
+
+body {
+  background-color: var(--black);
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+.projekt__szczegol {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  color: white;
+}
+
+.projekt__info {
+  display: flex;
+  /* flex-wrap: wrap; */
+
+  column-gap: 3rem;
+  width: 100%;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.projekt__nazwa {
+  font-size: 6rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.projekt__opis {
+  font-family: "PT Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.projekt__zdjecie {
+  max-width: 40vw;
+}
+
+.firma__mala {
+  font-size: inherit;
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.projekt__kod {
+  text-align: center;
+  margin-top: 5rem;
+  border-top: 2px solid white;
+  width: 80vw;
+  color: white;
+  padding: 5rem;
+}
+
+.kod__tag {
+  font-size: 4.5rem;
+  font-weight: 400;
+}
+
+.kod__tresc,
+.kod__tresc * {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.kod__pre {
+    overflow-x: auto;
+    background-color: rgb(49, 49, 49);
+}
+
+@media (max-width: 1250px) {
+  .projekt__nazwa {
+    font-size: 5.5rem;
+  }
+
+  .projekt__opis {
+    font-size: 1.7rem;
+  }
+
+  .kod__tag {
+    font-size: 3.8rem;
+  }
+
+  .kod__tresc,
+  .kod__tresc * {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 1025px) {
+  .projekt__nazwa {
+    font-size: 5rem;
+  }
+
+  .projekt__info {
+      flex-direction: column;
+      row-gap: 4rem;
+  }
+
+  .projekt__opis {
+    width: 80%;
+  }
+
+  .projekt__zdjecie {
+      max-width: 60vw;
+  }
+
+  .kod__tag {
+    font-size: 3.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .kod__tresc{
+    font-size: 1.3rem;
+    
+  }
+}
+
+@media(max-width: 650px) {
+    .projekt__nazwa {
+        font-size: 4.3rem;
+    }
+
+    .projekt__opis {
+        font-size: 1.5rem;
+    }
+
+    .kod__tag {
+        font-size: 2.7rem;
+    }
+
+}
+
+@media(max-width: 500px) {
+    .projekt__nazwa {
+        font-size: 3.8rem;
+        margin-bottom: 3rem;
+    }
+
+    .projekt__opis {
+        width: 100%;
+
+    }
+
+    .projekt__zdjecie {
+        max-width: 70vw;
+    }
+
+    .projekt__kod {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .kod__pre {
+        padding: 0 2rem;
+    }
+
+    .kod__tag {
+        font-size: 2.2rem;
+    }
+
+    .kod__tresc {
+        font-size: 1.2rem;
+    }
+}
