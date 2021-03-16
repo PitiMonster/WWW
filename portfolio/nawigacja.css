@@ -54,7 +54,7 @@
 .naw__link:link,
 .naw__link:visited {
   display: inline-block;
-  font-size: 3rem;
+  font-size: 2rem;
   padding: 1rem;
   color: white;
   text-decoration: none;
@@ -142,9 +142,9 @@
   transform: rotate(-135deg);
 }
 
-@media (max-width: 600px) {
+@media (min-width: 600px) {
   .naw__link:link,
   .naw__link:visited {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 }
