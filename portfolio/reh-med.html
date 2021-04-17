@@ -13,26 +13,24 @@
     <title>Projekt Reh-med</title>
 </head>
 <body>
-    <section id="nawiagacja">
-        <input type="checkbox" class="naw__checkbox" id="naw_check" />
-        <label for="naw_check" class="naw__btn"
-          ><span class="naw__icon">&nbsp;</span></label
-        >
-        <div class="naw__background">&nbsp;</div>
-        <nav class="naw">
-          <ul class="naw__lista">
-            <li class="naw__item">
-              <a href="index.html" class="naw__link">Strona główna</a>
-            </li>
-            <li class="naw__item">
-              <a href="hobbies.html" class="naw__link">Zainteresowania</a>
-            </li>
-            <li class="naw__item">
-              <a href="projects.html" class="naw__link">Projekty</a>
-            </li>
-          </ul>
-        </nav>
-      </section>
+  <section id="nawiagacja">
+    <input type="checkbox" class="naw__checkbox" id="naw_check" />
+    <label for="naw_check" class="naw__btn" id="navi__btn"
+      ><span class="naw__icon">&nbsp;</span></label
+    >
+    <div class="naw__background">&nbsp;</div>
+    <nav class="naw">
+      <ul class="naw__lista">
+        <li class="naw__item">
+          <a href="index.html" class="naw__link">Strona główna</a>
+        </li>
+        <li class="naw__item">
+          <a href="hobbies.html" class="naw__link">Zainteresowania</a>
+        </li>
+        <li class="naw__item"><a href="projects.html" class="naw__link">Projekty</a></li>
+      </ul>
+    </nav>
+  </section>
 
     <section class="projekt__szczegol">
         <h1 class="projekt__nazwa">Reh-med</h1>
@@ -71,5 +69,8 @@ const createPhotos = (photos, setExpanded) => {
             </pre>
         </div>
     </section>
+
+    <script src="navigation.js"></script>
+
 </body>
 </html>
