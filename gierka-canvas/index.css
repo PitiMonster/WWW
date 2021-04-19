@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 2rem 0;
+}
+
+#canvas_board {
+    /* position: absolute; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    width: 30vw;
+    height: 30vw;
+    min-width: 375px;
+    min-height: 375px;
+    border: 1px solid black;
+}
+
+#game_container {
+    
+    display: flex;
+    row-gap: 1.5rem;
+    justify-content: space-evenly;
+    align-items: center;
+    height:60vh;
+    width: 90vw;
+    padding: 2rem 0;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 200px));
+    grid-template-rows: repeat(auto-fill, minmax());
+    width: 40%;
+    height: 100%;
+    column-gap: 10px;
+    row-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+#gallery > * {
+    width: 100%;
+    height: 100%
+} 
+
+button {
+    font-size:2rem;
+    border: 1px solid black;
+    padding: .5rem 2rem;
+    border-radius: 5px;
+}
+
+#inputs_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#inputs_container input {
+    margin-right: 20px;
+}
+
+#inputs_container label {
+    margin-right: 10px;
+}
+
+@media (max-width: 1300px) {
+    #game_container {
+    width: 100vw;
+    }
+
+    #gallery {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1100px) {
+    #gallery {
+        width:50%;
+    }
+}
+
+@media (max-width: 875px) {
+    #game_container {
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    #gallery {
+        width:80%;
+    }
+
+    button {
+        font-size: 1.5rem;
+    }
+} 
+
+@media (max-width: 700px) {
+    button {
+        font-size: 1.2rem;
+        padding: .3rem 1.2rem
+    }
+
+    #inputs_container {
+        flex-direction: column;
+    }
+    #inputs_container > * {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 525px) {
+    #gallery {
+        width: 95%;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 150px));
+        
+    }
+}
+
+@media (max-width:450px) {
+    #canvas_board {
+        width: 80vw;
+        height:80vw;
+        min-width: 325px;
+        min-height: 320px;
+    }
+}
